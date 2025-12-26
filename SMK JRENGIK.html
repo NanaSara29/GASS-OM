@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMKN 1 JRENGIK - Unggul dalam Prestasi, Berkarakter dalam Budaya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #166534 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(22, 163, 74, 0.25);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #15803d 0%, #14532d 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4);
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    .slide-up {
+      animation: slideUp 0.8s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+    
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #16a34a;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .pulse-green {
+      animation: pulseGreen 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulseGreen {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4); }
+      50% { box-shadow: 0 0 0 15px rgba(22, 163, 74, 0); }
+    }
+    
+    .testimonial-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+    }
+    
+    .achievement-badge {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+    
+    .section-divider {
+      background: linear-gradient(90deg, transparent, #16a34a, transparent);
+      height: 1px;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+ </head>
+ <body class="h-full bg-white text-gray-900 overflow-x-hidden">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Navigation -->
+   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between items-center h-16 md:h-20"><!-- Logo -->
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center shadow-lg">
+        <svg class="w-6 h-6 md:w-8 md:h-8 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+        </svg>
+       </div>
+       <div class="hidden sm:block">
+        <h1 id="nav-school-name" class="text-lg md:text-xl font-bold text-gray-900">SMKN 1 JRENGIK</h1>
+        <p class="text-xs text-green-600 font-medium">Sekolah Menengah Kejuruan Negeri</p>
+       </div>
+      </div><!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-8"><a href="#beranda" class="nav-link text-sm font-medium text-gray-700 hover:text-green-600">Beranda</a> <a href="#tentang" class="nav-link text-sm font-medium text-gray-700 hover:text-green-600">Tentang</a> <a href="#program" class="nav-link text-sm font-medium text-gray-700 hover:text-green-600">Program</a> <a href="#fasilitas" class="nav-link text-sm font-medium text-gray-700 hover:text-green-600">Fasilitas</a> <a href="#prestasi" class="nav-link text-sm font-medium text-gray-700 hover:text-green-600">Prestasi</a> <a href="#kontak" class="nav-link text-sm font-medium text-gray-700 hover:text-green-600">Kontak</a> <a href="#kontak" class="btn-primary px-5 py-2.5 rounded-full text-white text-sm font-semibold">Daftar Sekarang</a>
+      </div><!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white shadow-2xl lg:hidden">
+     <div class="p-6"><button id="close-menu-btn" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-gray-100">
+       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+       </svg></button>
+      <div class="mt-8 flex flex-col gap-4"><a href="#beranda" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-green-600 py-2">Beranda</a> <a href="#tentang" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-green-600 py-2">Tentang</a> <a href="#program" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-green-600 py-2">Program</a> <a href="#fasilitas" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-green-600 py-2">Fasilitas</a> <a href="#prestasi" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-green-600 py-2">Prestasi</a> <a href="#kontak" class="mobile-nav-link text-lg font-medium text-gray-700 hover:text-green-600 py-2">Kontak</a> <a href="#kontak" class="btn-primary px-5 py-3 rounded-full text-white text-center font-semibold mt-4">Daftar Sekarang</a>
+      </div>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="beranda" class="hero-gradient relative min-h-screen flex items-center pt-20"><!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+     <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><defs>
+       <pattern id="grid" width="10" height="10" patternunits="userSpaceOnUse">
+        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" />
+       </pattern>
+      </defs> <rect width="100" height="100" fill="url(#grid)" />
+     </svg>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center"><!-- Left Content -->
+      <div class="text-center lg:text-left">
+       <div class="slide-up opacity-0 stagger-1"><span class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium mb-6"> ��� Sekolah Menengah Kejuruan Negeri Terbaik </span>
+       </div>
+       <h1 id="hero-school-name" class="slide-up opacity-0 stagger-2 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6">SMKN 1 JRENGIK</h1>
+       <p id="hero-slogan" class="slide-up opacity-0 stagger-3 text-lg sm:text-xl lg:text-2xl text-green-200 font-medium mb-8 max-w-xl mx-auto lg:mx-0">"Unggul dalam Prestasi, Berkarakter dalam Budaya"</p>
+       <div class="slide-up opacity-0 stagger-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"><a href="#kontak" class="btn-primary px-8 py-4 rounded-full text-white font-bold text-lg shadow-xl"> Daftar Sekarang → </a> <a href="#tentang" class="px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-all"> Pelajari Lebih Lanjut </a>
+       </div><!-- Stats -->
+       <div class="slide-up opacity-0 stagger-4 grid grid-cols-3 gap-4 mt-12 max-w-md mx-auto lg:mx-0">
+        <div class="text-center">
+         <div class="text-3xl md:text-4xl font-bold text-white">
+          500+
+         </div>
+         <div class="text-green-300 text-sm">
+          Siswa Aktif
+         </div>
+        </div>
+        <div class="text-center">
+         <div class="text-3xl md:text-4xl font-bold text-white">
+          50+
+         </div>
+         <div class="text-green-300 text-sm">
+          Guru Profesional
+         </div>
+        </div>
+        <div class="text-center">
+         <div class="text-3xl md:text-4xl font-bold text-white">
+          95%
+         </div>
+         <div class="text-green-300 text-sm">
+          Lulusan Kerja
+         </div>
+        </div>
+       </div>
+      </div><!-- Right Content - School Building Illustration -->
+      <div class="hidden lg:flex justify-center items-center">
+       <div class="floating relative">
+        <svg class="w-full max-w-lg" viewbox="0 0 400 350" fill="none"><!-- Main Building --> <rect x="50" y="120" width="300" height="180" fill="#ffffff" rx="8" /> <rect x="50" y="120" width="300" height="40" fill="#16a34a" rx="8 8 0 0" /> <!-- Windows Row 1 --> <rect x="80" y="180" width="50" height="40" fill="#e0f2fe" rx="4" /> <rect x="150" y="180" width="50" height="40" fill="#e0f2fe" rx="4" /> <rect x="220" y="180" width="50" height="40" fill="#e0f2fe" rx="4" /> <rect x="290" y="180" width="40" height="40" fill="#e0f2fe" rx="4" /> <!-- Windows Row 2 --> <rect x="80" y="240" width="50" height="40" fill="#e0f2fe" rx="4" /> <rect x="150" y="240" width="50" height="40" fill="#e0f2fe" rx="4" /> <rect x="220" y="240" width="50" height="40" fill="#e0f2fe" rx="4" /> <rect x="290" y="240" width="40" height="40" fill="#e0f2fe" rx="4" /> <!-- Door --> <rect x="175" y="250" width="50" height="50" fill="#14532d" rx="4" /> <circle cx="215" cy="275" r="4" fill="#fbbf24" /> <!-- Roof --> <polygon points="200,60 380,120 20,120" fill="#14532d" /> <!-- Flag --> <rect x="195" y="30" width="4" height="40" fill="#78350f" /> <rect x="199" y="30" width="30" height="20" fill="#ef4444" /> <rect x="199" y="40" width="30" height="10" fill="#ffffff" /> <!-- Trees --> <ellipse cx="30" cy="280" rx="25" ry="35" fill="#15803d" /> <rect x="25" y="295" width="10" height="25" fill="#78350f" /> <ellipse cx="370" cy="280" rx="25" ry="35" fill="#15803d" /> <rect x="365" y="295" width="10" height="25" fill="#78350f" /> <!-- Ground --> <rect x="0" y="300" width="400" height="50" fill="#166534" rx="8" /> <!-- School Sign --> <rect x="140" y="90" width="120" height="25" fill="#ffffff" rx="4" /> <text x="200" y="107" text-anchor="middle" fill="#14532d" font-size="10" font-weight="bold">
+          SMKN 1 JRENGIK
+         </text>
+        </svg>
+       </div>
+      </div>
+     </div>
+    </div><!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+     <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
+      <div class="w-1.5 h-3 bg-white rounded-full animate-bounce"></div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="tentang" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Tentang Kami</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Mengenal <span class="gradient-text">SMKN 1 JRENGIK</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Membangun generasi unggul dan berkarakter sejak tahun 2005</p>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"><!-- Image/Illustration -->
+      <div class="order-2 lg:order-1">
+       <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-green-500 to-green-700 rounded-3xl opacity-20 blur-2xl"></div>
+        <div class="relative bg-white rounded-3xl p-8 shadow-xl">
+         <svg class="w-full h-64" viewbox="0 0 400 250" fill="none"><!-- Book Stack --> <rect x="50" y="150" width="120" height="20" fill="#16a34a" rx="2" /> <rect x="55" y="130" width="110" height="20" fill="#15803d" rx="2" /> <rect x="60" y="110" width="100" height="20" fill="#14532d" rx="2" /> <!-- Graduation Cap --> <polygon points="200,50 260,80 200,110 140,80" fill="#1f2937" /> <rect x="195" y="30" width="10" height="30" fill="#fbbf24" /> <circle cx="200" cy="25" r="8" fill="#fbbf24" /> <path d="M230 80 L240 130" stroke="#fbbf24" stroke-width="3" /> <circle cx="242" cy="135" r="6" fill="#fbbf24" /> <!-- Pencil --> <rect x="280" y="80" width="15" height="100" fill="#fbbf24" rx="2" /> <polygon points="280,180 295,180 287.5,210" fill="#fcd34d" /> <rect x="280" y="70" width="15" height="15" fill="#ef4444" rx="2" /> <!-- Globe --> <circle cx="340" cy="130" r="40" fill="#60a5fa" stroke="#3b82f6" stroke-width="3" /> <ellipse cx="340" cy="130" rx="40" ry="15" stroke="#3b82f6" stroke-width="2" fill="none" /> <line x1="340" y1="90" x2="340" y2="170" stroke="#3b82f6" stroke-width="2" /> <path d="M310 110 Q340 130 370 110" stroke="#22c55e" stroke-width="8" fill="none" /> <path d="M315 140 Q340 150 365 140" stroke="#22c55e" stroke-width="6" fill="none" />
+         </svg>
+         <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="bg-green-50 rounded-xl p-4 text-center">
+           <div class="text-2xl font-bold text-green-700">
+            2005
+           </div>
+           <div class="text-sm text-gray-600">
+            Tahun Berdiri
+           </div>
+          </div>
+          <div class="bg-green-50 rounded-xl p-4 text-center">
+           <div class="text-2xl font-bold text-green-700">
+            A
+           </div>
+           <div class="text-sm text-gray-600">
+            Akreditasi
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Content -->
+      <div class="order-1 lg:order-2 space-y-8">
+       <div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2"><span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">📜</span> Sejarah Singkat</h3>
+        <p class="text-gray-600 leading-relaxed">SMKN 1 Jrengik didirikan pada tahun 2005 dengan komitmen untuk mencetak lulusan yang siap kerja dan berkarakter. Bermula dari 2 jurusan, kini kami telah berkembang menjadi sekolah kejuruan unggulan di Kabupaten Sampang dengan berbagai program keahlian yang relevan dengan kebutuhan industri.</p>
+       </div>
+       <div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2"><span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">🎯</span> Visi</h3>
+        <p class="text-gray-600 leading-relaxed">"Menjadi lembaga pendidikan kejuruan yang unggul dalam prestasi akademik dan non-akademik, serta menghasilkan lulusan yang berkarakter, berdaya saing tinggi, dan siap berkontribusi di era global."</p>
+       </div>
+       <div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2"><span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">🚀</span> Misi</h3>
+        <ul class="text-gray-600 space-y-2">
+         <li class="flex items-start gap-2"><span class="text-green-600 mt-1">✓</span> Menyelenggarakan pendidikan berkualitas berbasis kompetensi</li>
+         <li class="flex items-start gap-2"><span class="text-green-600 mt-1">✓</span> Mengembangkan karakter siswa yang berakhlak mulia</li>
+         <li class="flex items-start gap-2"><span class="text-green-600 mt-1">✓</span> Membangun kemitraan dengan dunia usaha dan industri</li>
+         <li class="flex items-start gap-2"><span class="text-green-600 mt-1">✓</span> Menciptakan lingkungan belajar yang kondusif dan inovatif</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- News Section -->
+   <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Berita &amp; Kegiatan</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Berita <span class="gradient-text">Terbaru</span></h2>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"><!-- News Card 1 -->
+      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+       <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+        <svg class="w-20 h-20 text-white/80" viewbox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+        </svg>
+       </div>
+       <div class="p-6">
+        <div class="flex items-center gap-2 mb-3"><span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Akademik</span> <span class="text-gray-400 text-sm">15 Jan 2025</span>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Pembukaan Pendaftaran Siswa Baru 2025/2026</h3>
+        <p class="text-gray-600 text-sm mb-4">Pendaftaran siswa baru SMKN 1 Jrengik telah dibuka! Segera daftarkan diri Anda untuk bergabung bersama kami.</p><a href="#" class="text-green-600 font-semibold text-sm hover:text-green-700 flex items-center gap-1"> Baca Selengkapnya 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </article><!-- News Card 2 -->
+      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+       <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+        <svg class="w-20 h-20 text-white/80" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+        </svg>
+       </div>
+       <div class="p-6">
+        <div class="flex items-center gap-2 mb-3"><span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">Prestasi</span> <span class="text-gray-400 text-sm">10 Jan 2025</span>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Juara 1 LKS Tingkat Provinsi Jawa Timur</h3>
+        <p class="text-gray-600 text-sm mb-4">Siswa jurusan TSM berhasil meraih juara pertama dalam Lomba Kompetensi Siswa tingkat provinsi.</p><a href="#" class="text-green-600 font-semibold text-sm hover:text-green-700 flex items-center gap-1"> Baca Selengkapnya 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </article><!-- News Card 3 -->
+      <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+       <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+        <svg class="w-20 h-20 text-white/80" viewbox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+        </svg>
+       </div>
+       <div class="p-6">
+        <div class="flex items-center gap-2 mb-3"><span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Kegiatan</span> <span class="text-gray-400 text-sm">5 Jan 2025</span>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Kunjungan Industri ke PT Astra Honda Motor</h3>
+        <p class="text-gray-600 text-sm mb-4">Siswa jurusan TSM melakukan kunjungan industri untuk mempelajari proses produksi sepeda motor.</p><a href="#" class="text-green-600 font-semibold text-sm hover:text-green-700 flex items-center gap-1"> Baca Selengkapnya 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section><!-- Principal Welcome Section -->
+   <section class="py-16 md:py-24 bg-gradient-to-br from-green-900 via-green-800 to-green-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+     <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><defs>
+       <pattern id="dots" width="5" height="5" patternunits="userSpaceOnUse">
+        <circle cx="2.5" cy="2.5" r="1" fill="white" />
+       </pattern>
+      </defs> <rect width="100" height="100" fill="url(#dots)" />
+     </svg>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center"><!-- Principal Photo -->
+      <div class="lg:col-span-2 flex justify-center">
+       <div class="relative">
+        <div class="absolute -inset-4 bg-green-400/30 rounded-full blur-2xl"></div>
+        <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-green-400 to-green-600 p-1">
+         <div class="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden"><img src="https://rri.co.id/daerah/1589605/smkn-1-jrengik-dukung-larangan-wisuda" alt="Kepala Sekolah SMKN 1 Jrengik" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="w-full h-full items-center justify-center hidden bg-gradient-to-br from-green-100 to-green-200">
+           <svg class="w-24 h-24 md:w-32 md:h-32 text-green-600" viewbox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+           </svg>
+          </div>
+         </div>
+        </div>
+        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg"><span class="text-green-700 font-semibold text-sm">Kepala Sekolah</span>
+        </div>
+       </div>
+      </div><!-- Welcome Message -->
+      <div class="lg:col-span-3 text-center lg:text-left"><span class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium mb-6"> 👋 Sambutan Kepala Sekolah </span>
+       <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Selamat Datang di SMKN 1 JRENGIK</h2>
+       <blockquote class="text-green-100 text-lg leading-relaxed mb-6">
+        "Assalamualaikum Warahmatullahi Wabarakatuh. Puji syukur kepada Allah SWT, kami menyambut Anda di website resmi SMKN 1 Jrengik. Sekolah kami berkomitmen untuk mencetak generasi muda yang tidak hanya unggul dalam keterampilan teknis, tetapi juga berkarakter kuat dan berakhlak mulia. Mari bersama-sama kita wujudkan masa depan yang gemilang!"
+       </blockquote>
+       <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+        <div>
+         <p id="principal-name-display" class="text-white font-bold text-xl">Drs. Ahmad Suharto, M.Pd</p>
+         <p class="text-green-300">Kepala SMKN 1 Jrengik</p>
+        </div>
+        <div class="hidden sm:block w-px h-12 bg-green-600"></div>
+        <div class="text-green-300 text-sm">
+         <p>NIP. 196705151992031005</p>
+         <p>Periode 2020 - Sekarang</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Academic Programs Section -->
+   <section id="program" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Program Keahlian</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Program <span class="gradient-text">Akademik</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Pilih jurusan sesuai minat dan bakatmu untuk masa depan yang cerah</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"><!-- TSM -->
+      <div class="card-hover bg-white rounded-3xl p-6 lg:p-8 shadow-lg border border-gray-100">
+       <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+        <svg class="w-8 h-8 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-gray-900 mb-3">Teknik Sepeda Motor (TSM)</h3>
+       <p class="text-gray-600 mb-6">Mempelajari perawatan, perbaikan, dan modifikasi sepeda motor dengan standar industri otomotif nasional.</p>
+       <ul class="space-y-2 mb-6">
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Engine Tune-Up</li>
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Sistem Kelistrikan</li>
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Praktik Industri</li>
+       </ul><a href="#kontak" class="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700"> Pelajari Lebih Lanjut 
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div><!-- Multimedia -->
+      <div class="card-hover bg-white rounded-3xl p-6 lg:p-8 shadow-lg border border-gray-100">
+       <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+        <svg class="w-8 h-8 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-gray-900 mb-3">Multimedia</h3>
+       <p class="text-gray-600 mb-6">Mengembangkan kreativitas dalam produksi konten digital, video editing, animasi, dan desain web.</p>
+       <ul class="space-y-2 mb-6">
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Video Production</li>
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Motion Graphics</li>
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Web Development</li>
+       </ul><a href="#kontak" class="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700"> Pelajari Lebih Lanjut 
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div><!-- DKV -->
+      <div class="card-hover bg-white rounded-3xl p-6 lg:p-8 shadow-lg border border-gray-100 md:col-span-2 lg:col-span-1">
+       <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+        <svg class="w-8 h-8 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z" /> <circle cx="6.5" cy="11.5" r="1.5" /> <circle cx="9.5" cy="7.5" r="1.5" /> <circle cx="14.5" cy="7.5" r="1.5" /> <circle cx="17.5" cy="11.5" r="1.5" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-gray-900 mb-3">Desain Komunikasi Visual (DKV)</h3>
+       <p class="text-gray-600 mb-6">Mempelajari seni desain grafis, branding, ilustrasi, dan komunikasi visual untuk industri kreatif.</p>
+       <ul class="space-y-2 mb-6">
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Graphic Design</li>
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Brand Identity</li>
+        <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">✓</span> Digital Illustration</li>
+       </ul><a href="#kontak" class="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700"> Pelajari Lebih Lanjut 
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Facilities Section -->
+   <section id="fasilitas" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Fasilitas Sekolah</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Fasilitas <span class="gradient-text">Modern</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Didukung fasilitas lengkap untuk menunjang proses belajar mengajar</p>
+     </div>
+     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6"><!-- Laboratorium -->
+      <div class="card-hover group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 text-center">
+       <div class="w-14 h-14 mx-auto mb-4 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-7 h-7 text-green-600" viewbox="0 0 24 24" fill="currentColor"><path d="M7 2v2h1v14a4 4 0 0 0 4 4 4 4 0 0 0 4-4V4h1V2H7zm4 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2-4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm1-5h-4V4h4v3z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Laboratorium</h3>
+       <p class="text-xs text-gray-600">Lab Komputer &amp; Otomotif</p>
+      </div><!-- Perpustakaan -->
+      <div class="card-hover group bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center">
+       <div class="w-14 h-14 mx-auto mb-4 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-7 h-7 text-blue-600" viewbox="0 0 24 24" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Perpustakaan</h3>
+       <p class="text-xs text-gray-600">5000+ Koleksi Buku</p>
+      </div><!-- Masjid -->
+      <div class="card-hover group bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 text-center">
+       <div class="w-14 h-14 mx-auto mb-4 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-7 h-7 text-amber-600" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 4 3.5 4 6v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-2.5-4-4-8-4zm0 2c2.76 0 5.11.86 6 1.54V10h-2V6.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5V10h-2V6.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5V10h-2V6.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5V10H6V5.54C6.89 4.86 9.24 4 12 4zm0 8c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Masjid</h3>
+       <p class="text-xs text-gray-600">Tempat Ibadah Nyaman</p>
+      </div><!-- Aula -->
+      <div class="card-hover group bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 text-center">
+       <div class="w-14 h-14 mx-auto mb-4 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-7 h-7 text-purple-600" viewbox="0 0 24 24" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Aula</h3>
+       <p class="text-xs text-gray-600">Kapasitas 500 Orang</p>
+      </div><!-- Ruang Multimedia -->
+      <div class="card-hover group bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 text-center col-span-2 md:col-span-1">
+       <div class="w-14 h-14 mx-auto mb-4 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+        <svg class="w-7 h-7 text-pink-600" viewbox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9 8h2v8H9zm4 0h2v8h-2z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">R. Multimedia</h3>
+       <p class="text-xs text-gray-600">Studio Produksi</p>
+      </div>
+     </div><!-- Additional Facilities Grid -->
+     <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 flex items-center gap-4">
+       <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0"><span class="text-white text-2xl">🏃</span>
+       </div>
+       <div>
+        <h4 class="font-bold text-gray-900">Lapangan Olahraga</h4>
+        <p class="text-sm text-gray-600">Futsal, Basket, Voli, dan Badminton</p>
+       </div>
+      </div>
+      <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 flex items-center gap-4">
+       <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0"><span class="text-white text-2xl">🌐</span>
+       </div>
+       <div>
+        <h4 class="font-bold text-gray-900">WiFi Area</h4>
+        <p class="text-sm text-gray-600">Koneksi Internet Cepat di Seluruh Area</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Extracurricular Section -->
+   <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Ekstrakurikuler</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Kegiatan <span class="gradient-text">Siswa</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Kembangkan bakat dan minatmu melalui berbagai kegiatan ekstrakurikuler</p>
+     </div>
+     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6"><!-- Pramuka -->
+      <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100">
+       <div class="text-5xl mb-4">
+        ⚜️
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Pramuka</h3>
+       <p class="text-xs text-gray-500">Wajib</p>
+      </div><!-- OSIS -->
+      <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100">
+       <div class="text-5xl mb-4">
+        🎓
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">OSIS</h3>
+       <p class="text-xs text-gray-500">Organisasi</p>
+      </div><!-- PMR -->
+      <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100">
+       <div class="text-5xl mb-4">
+        🏥
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">PMR</h3>
+       <p class="text-xs text-gray-500">Kesehatan</p>
+      </div><!-- Futsal -->
+      <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100">
+       <div class="text-5xl mb-4">
+        ⚽
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Futsal</h3>
+       <p class="text-xs text-gray-500">Olahraga</p>
+      </div><!-- Klub Seni -->
+      <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 col-span-2 md:col-span-1">
+       <div class="text-5xl mb-4">
+        🎨
+       </div>
+       <h3 class="font-bold text-gray-900 mb-1">Klub Seni</h3>
+       <p class="text-xs text-gray-500">Kreativitas</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Achievements Section -->
+   <section id="prestasi" class="py-16 md:py-24 bg-gradient-to-br from-green-900 to-green-950 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+     <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><defs>
+       <pattern id="trophy" width="20" height="20" patternunits="userSpaceOnUse">
+        <text x="10" y="15" text-anchor="middle" font-size="10">
+         🏆
+        </text>
+       </pattern>
+      </defs> <rect width="100" height="100" fill="url(#trophy)" />
+     </svg>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-green-300 text-sm font-semibold mb-4">🏆 Prestasi Sekolah</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Prestasi <span class="text-green-400">Membanggakan</span></h2>
+      <p class="text-green-200 text-lg max-w-2xl mx-auto">Berbagai penghargaan yang telah diraih siswa-siswi SMKN 1 Jrengik</p>
+     </div><!-- Achievement Cards Slider -->
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Achievement 1 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+       <div class="achievement-badge w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg"><span class="text-3xl">🥇</span>
+       </div>
+       <div class="text-amber-400 font-semibold text-sm mb-2">
+        Akademik
+       </div>
+       <h3 class="text-xl font-bold text-white mb-2">Juara 1 LKS TSM Provinsi</h3>
+       <p class="text-green-200 text-sm mb-3">Lomba Kompetensi Siswa tingkat Provinsi Jawa Timur 2024</p><span class="text-green-400 text-xs">📅 Oktober 2024</span>
+      </div><!-- Achievement 2 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+       <div class="achievement-badge w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg"><span class="text-3xl">🥈</span>
+       </div>
+       <div class="text-blue-400 font-semibold text-sm mb-2">
+        Olahraga
+       </div>
+       <h3 class="text-xl font-bold text-white mb-2">Juara 2 Futsal Kabupaten</h3>
+       <p class="text-green-200 text-sm mb-3">Turnamen Futsal Antar SMK se-Kabupaten Sampang</p><span class="text-green-400 text-xs">📅 September 2024</span>
+      </div><!-- Achievement 3 -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+       <div class="achievement-badge w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-lg"><span class="text-3xl">🥇</span>
+       </div>
+       <div class="text-pink-400 font-semibold text-sm mb-2">
+        Seni
+       </div>
+       <h3 class="text-xl font-bold text-white mb-2">Juara 1 Desain Poster</h3>
+       <p class="text-green-200 text-sm mb-3">Festival Seni Budaya Pelajar Jawa Timur 2024</p><span class="text-green-400 text-xs">📅 November 2024</span>
+      </div>
+     </div>
+     <div class="text-center mt-10"><a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-700 rounded-full font-bold hover:bg-green-50 transition-all shadow-xl"> Lihat Semua Prestasi 
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+       </svg></a>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Testimoni</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Apa Kata <span class="gradient-text">Mereka?</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Pengalaman siswa dan alumni SMKN 1 Jrengik</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"><!-- Testimonial 1 -->
+      <div class="testimonial-card rounded-2xl p-6 lg:p-8 shadow-lg border border-green-100">
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400 text-xl">★★★★★</span>
+       </div>
+       <p class="text-gray-700 mb-6 italic">"SMKN 1 Jrengik memberikan saya keterampilan teknis yang sangat berharga. Sekarang saya bekerja di bengkel resmi Honda berkat ilmu yang saya dapat di sini."</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center text-white font-bold">
+         AR
+        </div>
+        <div>
+         <p class="font-bold text-gray-900">Ahmad Rizky</p>
+         <p class="text-sm text-gray-500">Alumni TSM 2022</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 2 -->
+      <div class="testimonial-card rounded-2xl p-6 lg:p-8 shadow-lg border border-green-100">
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400 text-xl">★★★★★</span>
+       </div>
+       <p class="text-gray-700 mb-6 italic">"Jurusan Multimedia di sini sangat lengkap fasilitasnya. Saya belajar video editing, desain grafis, dan bahkan programming. Sangat membantu karir saya sebagai content creator!"</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white font-bold">
+         SA
+        </div>
+        <div>
+         <p class="font-bold text-gray-900">Siti Aisyah</p>
+         <p class="text-sm text-gray-500">Alumni Multimedia 2023</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 3 -->
+      <div class="testimonial-card rounded-2xl p-6 lg:p-8 shadow-lg border border-green-100 md:col-span-2 lg:col-span-1">
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400 text-xl">★★★★★</span>
+       </div>
+       <p class="text-gray-700 mb-6 italic">"Guru-guru di sini sangat profesional dan peduli dengan perkembangan siswa. Lingkungan sekolah juga sangat mendukung untuk belajar dan berkreasi."</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold">
+         MF
+        </div>
+        <div>
+         <p class="font-bold text-gray-900">Muhammad Fadli</p>
+         <p class="text-sm text-gray-500">Siswa DKV Kelas XII</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="kontak" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-12 md:mb-16"><span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">Hubungi Kami</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Informasi <span class="gradient-text">Kontak</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut</p>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12"><!-- Contact Info -->
+      <div class="space-y-6"><!-- Address -->
+       <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 flex items-start gap-4">
+        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-bold text-gray-900 mb-1">Alamat Sekolah</h3>
+         <p id="address-display" class="text-gray-600">Jl. Raya Jrengik No. 123, Kecamatan Jrengik, Kabupaten Sampang, Jawa Timur 69262</p>
+        </div>
+       </div><!-- Phone -->
+       <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 flex items-start gap-4">
+        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-bold text-gray-900 mb-1">Telepon</h3>
+         <p id="phone-display" class="text-gray-600">(031) 123-4567</p>
+         <p class="text-gray-500 text-sm">Senin - Jumat, 07:00 - 15:00 WIB</p>
+        </div>
+       </div><!-- Email -->
+       <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 flex items-start gap-4">
+        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+         <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-bold text-gray-900 mb-1">Email</h3>
+         <p id="email-display" class="text-gray-600">info@smkn1jrengik.sch.id</p>
+        </div>
+       </div><!-- Map -->
+       <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+        <div class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+         <div class="text-center">
+          <svg class="w-16 h-16 text-green-600 mx-auto mb-2" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          <p class="text-green-700 font-semibold">Lokasi SMKN 1 Jrengik</p>
+          <p class="text-green-600 text-sm">Kec. Jrengik, Kab. Sampang</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Contact Form -->
+      <div class="bg-white rounded-3xl p-6 lg:p-8 shadow-xl border border-gray-100">
+       <h3 class="text-2xl font-bold text-gray-900 mb-6">Kirim Pesan</h3>
+       <form id="contact-form" class="space-y-5">
+        <div><label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all" placeholder="Masukkan nama lengkap">
+        </div>
+        <div><label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all" placeholder="contoh@email.com">
+        </div>
+        <div><label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Nomor Telepon</label> <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all" placeholder="08xx-xxxx-xxxx">
+        </div>
+        <div><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all resize-none" placeholder="Tulis pesan Anda di sini..."></textarea>
+        </div><button type="submit" id="submit-btn" class="w-full btn-primary py-4 rounded-xl text-white font-bold text-lg flex items-center justify-center gap-2"> <span id="btn-text">Kirim Pesan</span> <span id="btn-loading" class="hidden">
+          <svg class="animate-spin h-5 w-5" fill="none" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" /> <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+          </svg></span> </button> <!-- Success Message -->
+        <div id="success-message" class="hidden bg-green-50 border border-green-200 rounded-xl p-4 text-center">
+         <div class="text-3xl mb-2">
+          ✅
+         </div>
+         <p class="text-green-700 font-semibold">Pesan Terkirim!</p>
+         <p class="text-green-600 text-sm">Terima kasih, kami akan segera menghubungi Anda.</p>
+        </div><!-- Error Message -->
+        <div id="error-message" class="hidden bg-red-50 border border-red-200 rounded-xl p-4 text-center">
+         <div class="text-3xl mb-2">
+          ❌
+         </div>
+         <p class="text-red-700 font-semibold">Gagal Mengirim</p>
+         <p class="text-red-600 text-sm">Terjadi kesalahan, silakan coba lagi.</p>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-gray-900 text-white py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12"><!-- School Info -->
+      <div class="lg:col-span-2">
+       <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center">
+         <svg class="w-8 h-8 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+         </svg>
+        </div>
+        <div>
+         <h3 id="footer-school-name" class="text-xl font-bold">SMKN 1 JRENGIK</h3>
+         <p class="text-gray-400 text-sm">Sekolah Menengah Kejuruan Negeri</p>
+        </div>
+       </div>
+       <p class="text-gray-400 mb-4 max-w-md">Unggul dalam Prestasi, Berkarakter dalam Budaya. Mencetak generasi muda yang siap kerja dan berkontribusi untuk bangsa.</p>
+       <div class="flex gap-4"><a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+         </svg></a> <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg></a> <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+         </svg></a>
+       </div>
+      </div><!-- Quick Links -->
+      <div>
+       <h4 class="text-lg font-bold mb-4">Tautan Cepat</h4>
+       <ul class="space-y-2">
+        <li><a href="#beranda" class="text-gray-400 hover:text-green-400 transition-colors">Beranda</a></li>
+        <li><a href="#tentang" class="text-gray-400 hover:text-green-400 transition-colors">Tentang Kami</a></li>
+        <li><a href="#program" class="text-gray-400 hover:text-green-400 transition-colors">Program Akademik</a></li>
+        <li><a href="#fasilitas" class="text-gray-400 hover:text-green-400 transition-colors">Fasilitas</a></li>
+        <li><a href="#prestasi" class="text-gray-400 hover:text-green-400 transition-colors">Prestasi</a></li>
+       </ul>
+      </div><!-- Contact Info -->
+      <div>
+       <h4 class="text-lg font-bold mb-4">Kontak</h4>
+       <ul class="space-y-3">
+        <li class="flex items-start gap-2 text-gray-400">
+         <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+         </svg><span id="footer-address" class="text-sm">Jl. Raya Jrengik, Sampang</span></li>
+        <li class="flex items-center gap-2 text-gray-400">
+         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span id="footer-phone" class="text-sm">(031) 123-4567</span></li>
+        <li class="flex items-center gap-2 text-gray-400">
+         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+         </svg><span id="footer-email" class="text-sm">info@smkn1jrengik.sch.id</span></li>
+       </ul>
+      </div>
+     </div>
+     <div class="border-t border-gray-800 pt-8 text-center">
+      <p class="text-gray-500 text-sm">© 2025 SMKN 1 JRENGIK. Hak Cipta Dilindungi.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      school_name: 'SMKN 1 JRENGIK',
+      school_slogan: 'Unggul dalam Prestasi, Berkarakter dalam Budaya',
+      principal_name: 'Drs. Ahmad Suharto, M.Pd',
+      school_address: 'Jl. Raya Jrengik No. 123, Kecamatan Jrengik, Kabupaten Sampang, Jawa Timur 69262',
+      school_phone: '(031) 123-4567',
+      school_email: 'info@smkn1jrengik.sch.id',
+      background_color: '#ffffff',
+      surface_color: '#f9fafb',
+      text_color: '#111827',
+      primary_action_color: '#16a34a',
+      secondary_action_color: '#15803d'
+    };
+
+    // Store messages locally for display
+    let contactMessages = [];
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          // Update school name
+          const schoolName = config.school_name || defaultConfig.school_name;
+          document.getElementById('nav-school-name').textContent = schoolName;
+          document.getElementById('hero-school-name').textContent = schoolName;
+          document.getElementById('footer-school-name').textContent = schoolName;
+
+          // Update slogan
+          const slogan = config.school_slogan || defaultConfig.school_slogan;
+          document.getElementById('hero-slogan').textContent = `"${slogan}"`;
+
+          // Update principal name
+          const principalName = config.principal_name || defaultConfig.principal_name;
+          document.getElementById('principal-name-display').textContent = principalName;
+
+          // Update address
+          const address = config.school_address || defaultConfig.school_address;
+          document.getElementById('address-display').textContent = address;
+          document.getElementById('footer-address').textContent = address.split(',')[0];
+
+          // Update phone
+          const phone = config.school_phone || defaultConfig.school_phone;
+          document.getElementById('phone-display').textContent = phone;
+          document.getElementById('footer-phone').textContent = phone;
+
+          // Update email
+          const email = config.school_email || defaultConfig.school_email;
+          document.getElementById('email-display').textContent = email;
+          document.getElementById('footer-email').textContent = email;
+
+          // Update colors
+          document.body.style.setProperty('--bg-color', config.background_color || defaultConfig.background_color);
+          document.body.style.setProperty('--surface-color', config.surface_color || defaultConfig.surface_color);
+          document.body.style.setProperty('--text-color', config.text_color || defaultConfig.text_color);
+          document.body.style.setProperty('--primary-color', config.primary_action_color || defaultConfig.primary_action_color);
+          document.body.style.setProperty('--secondary-color', config.secondary_action_color || defaultConfig.secondary_action_color);
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => {
+                config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['school_name', config.school_name || defaultConfig.school_name],
+          ['school_slogan', config.school_slogan || defaultConfig.school_slogan],
+          ['principal_name', config.principal_name || defaultConfig.principal_name],
+          ['school_address', config.school_address || defaultConfig.school_address],
+          ['school_phone', config.school_phone || defaultConfig.school_phone],
+          ['school_email', config.school_email || defaultConfig.school_email]
+        ])
+      });
+    }
+
+    // Data SDK handler for contact form
+    const dataHandler = {
+      onDataChanged(data) {
+        contactMessages = data;
+        // Messages are stored but not displayed publicly
+      }
+    };
+
+    // Initialize Data SDK
+    async function initDataSdk() {
+      if (window.dataSdk) {
+        const result = await window.dataSdk.init(dataHandler);
+        if (!result.isOk) {
+          console.error('Failed to initialize Data SDK');
+        }
+      }
+    }
+
+    initDataSdk();
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnLoading = document.getElementById('btn-loading');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Check message limit
+      if (contactMessages.length >= 999) {
+        errorMessage.querySelector('p:last-child').textContent = 'Kotak pesan penuh. Silakan coba lagi nanti.';
+        errorMessage.classList.remove('hidden');
+        setTimeout(() => errorMessage.classList.add('hidden'), 5000);
+        return;
+      }
+
+      // Show loading state
+      btnText.classList.add('hidden');
+      btnLoading.classList.remove('hidden');
+      submitBtn.disabled = true;
+      successMessage.classList.add('hidden');
+      errorMessage.classList.add('hidden');
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value || '',
+        message: document.getElementById('message').value,
+        createdAt: new Date().toISOString()
+      };
+
+      if (window.dataSdk) {
+        const result = await window.dataSdk.create(formData);
+        
+        btnText.classList.remove('hidden');
+        btnLoading.classList.add('hidden');
+        submitBtn.disabled = false;
+
+        if (result.isOk) {
+          successMessage.classList.remove('hidden');
+          contactForm.reset();
+          setTimeout(() => successMessage.classList.add('hidden'), 5000);
+        } else {
+          errorMessage.classList.remove('hidden');
+          setTimeout(() => errorMessage.classList.add('hidden'), 5000);
+        }
+      } else {
+        // Fallback if SDK not available
+        btnText.classList.remove('hidden');
+        btnLoading.classList.add('hidden');
+        submitBtn.disabled = false;
+        successMessage.classList.remove('hidden');
+        contactForm.reset();
+        setTimeout(() => successMessage.classList.add('hidden'), 5000);
+      }
+    });
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+
+    document.getElementById('app-wrapper').addEventListener('scroll', (e) => {
+      const currentScroll = e.target.scrollTop;
+      
+      if (currentScroll > 100) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b3d58a8032a0ddc',t:'MTc2NjcxODIyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
